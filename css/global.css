@@ -44,7 +44,7 @@ a, i {
 .header {
   position: fixed;
   left: 0;
-  top: 0;
+  top: -1px;
   width: 100%;
   height: auto;
   z-index: 10;
@@ -85,6 +85,8 @@ a, i {
 .menu.is-active {
   top: 0;
   left: 0;
+  background-color: black;
+  width: 40%;
 }
 
 .menu-inner {
@@ -351,17 +353,10 @@ a, i {
   margin-right: auto;
 }
 
-#promo-video .vjs-poster {
-  width: 500px;
-  margin: auto;
-  display: block;
-  border-radius: 10px;
-}
-
 #promo-video #my-video {
+  width: 700px;
+  border-radius: 10px!important;
   margin: auto;
-  display: block;
-  border-radius: 10px;
   position: relative;
 }
 /* END OF PROMO VIDEO SECTION */
