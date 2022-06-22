@@ -359,6 +359,16 @@ a, i {
   margin: auto;
   position: relative;
 }
+
+#promo-video .vjs-control-bar {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 650px;
+}
+
+.footer-player-margin {
+  margin-top: 25%;
+} 
 /* END OF PROMO VIDEO SECTION */
 
 /* TEAM SECTION : */
@@ -453,6 +463,7 @@ footer {
   position: relative;
   margin-top: 150px;
   width: 100%;
+  background-color: black;
   height: 90px;
 }
 
