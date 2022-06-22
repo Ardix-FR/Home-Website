@@ -263,74 +263,72 @@ a, i {
 }
 /* END OF HERO SECTION */
 
-/* CODE REVIEW SECTION : */
-#code-review {
-    color: white;
-    margin-top: 80px;
-    /* border: 2px solid red; */
-
-    padding-bottom: 40px;
-    padding-top: 20px;
+/* BREAK-POINTS SECTION : */
+#beaks-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4%;
+  /* background: red; */
 }
 
-#code-review h1 {
-    font-weight: bold;
-    margin-left: 57%;
-    font-size: 55px;
-    width: 500px;
-}
-
-#code-review p {
-  font-size: 18px;
-  width: 500px;
-  margin-top: 20px;
-  margin-left: 57%;
-  text-align: justify;
-}
-
-#code-review button {
-  background-color: #003265;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+#beaks-points .card {
+  max-width: 300px;
+  min-height: 250px;
+  background: transparent;
+  padding: 30px;
+  box-sizing: border-box;
   border-radius: 10px;
-
-  margin-top: 22px;
-  margin-left: 57%;
-  cursor: pointer;
+  color: #FFF;
+  margin:20px;
   transition: 0.7s;
 }
 
-#code-review button .gg-arrow-right {
-  float: right;
-  margin-left: 10px;
-  margin-top: -2px;
+#beaks-points .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 100px;
 }
 
-#code-review button:hover {
-  -webkit-transform:scale(1.2);
+#beaks-points .card:hover {
+  background-color: #003265;
 }
 
-#code-review .techno-list {
-  float: left;
-  padding: 20px;
-  margin-left: 15.5%;
-  margin-top: -16%;
+#beaks-points .card-title {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
 }
 
-#code-review .techno-list img {
-  width: 70px;
-  margin-left: 10px;
+#beaks-points .card-content {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+#beaks-points .card-btn {
+  all: unset;
+  display: block;
+  margin-top: 15px;
+  border: 2px solid #FFF;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 600;
+  transition: all 0.7s;
   cursor: pointer;
-  transition: 0.5s;
+  letter-spacing: 1.2px;
 }
 
-#code-review .techno-list img:hover {
-  -webkit-transform:scale(1.2);
+#beaks-points .card-btn:hover {
+ color:#000;
+ background: #FFF;
 }
-/* END OF CODE REVIEW SECTION */
+/* END OF BREAK-POINTS SECTION */
 
 /* TEAM SECTION : */
 #team-member {
