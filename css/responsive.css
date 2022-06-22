@@ -69,6 +69,23 @@
   }
 }
 
+@media only screen and (max-width: 877px) {
+  .about-section .hero-text h2 {
+    font-size: 80px;
+    margin-left: -180px;
+  }
+
+  .about-section p {
+    margin-left: 520px;
+    width: 500px;
+    padding-right: 100px;
+  }
+
+  .about-section .hero-text h2:nth-child(2) {
+    margin-left: -50px;
+  }
+}
+
 @media only screen and (max-width: 895px) {
   #hero-section .hero-img {
     margin-top: 30px;
@@ -82,7 +99,7 @@
     height: 2000px;
   }
 
-  #beaks-points {
+  #breaks-points {
     margin-left: 8%;
     float: left;
   }
@@ -90,5 +107,11 @@
   footer {
     bottom: -5px;
     position: fixed;
+  }
+}
+
+@media only screen and (max-width: 1402px) {
+  .about-section {
+    margin-left: -470px;
   }
 }

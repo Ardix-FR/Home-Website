@@ -17,6 +17,11 @@ li {
     list-style: none;
 }
 
+a {
+  cursor: pointer;
+  color: #03a9f4;
+}
+
 a, i {
     text-decoration: none;
     cursor: pointer;
@@ -44,7 +49,7 @@ a, i {
 .header {
   position: fixed;
   left: 0;
-  top: -1px;
+  top: -3px;
   width: 100%;
   height: auto;
   z-index: 10;
@@ -200,7 +205,7 @@ a, i {
     margin-top: 120px;
     padding-left: 15%;
     padding-top: 5%;
-    /* border: 2px solid red; */
+    /* animation: 0.7s ease-in-out 0s 1 top_to_bottom_effect; */
 }
 
 #hero-section h1 {
@@ -266,7 +271,7 @@ a, i {
 /* END OF HERO SECTION */
 
 /* BREAK-POINTS SECTION : */
-#beaks-points {
+#breaks-points {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -274,9 +279,9 @@ a, i {
   /* background: red; */
 }
 
-#beaks-points .card {
+#breaks-points .card {
   max-width: 300px;
-  min-height: 250px;
+  min-height: 385.56px;
   background: transparent;
   padding: 30px;
   box-sizing: border-box;
@@ -286,7 +291,7 @@ a, i {
   transition: 0.7s;
 }
 
-#beaks-points .card img {
+#breaks-points .card img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -294,24 +299,24 @@ a, i {
   width: 100px;
 }
 
-#beaks-points .card:hover {
+#breaks-points .card:hover {
   background-color: #003265;
 }
 
-#beaks-points .card-title {
+#breaks-points .card-title {
   margin-top: 0;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1.2px;
 }
 
-#beaks-points .card-content {
+#breaks-points .card-content {
   font-size: 14px;
   letter-spacing: 0.5px;
   line-height: 1.5;
 }
 
-#beaks-points .card-btn {
+#breaks-points .card-btn {
   all: unset;
   display: block;
   margin-top: 15px;
@@ -326,7 +331,7 @@ a, i {
   letter-spacing: 1.2px;
 }
 
-#beaks-points .card-btn:hover {
+#breaks-points .card-btn:hover {
  color:#000;
  background: #FFF;
 }
@@ -394,20 +399,7 @@ a, i {
   border-radius: 20px;
   transition: 0.7s;
   margin-left: 20px;
-
-  animation: 1.5s ease-in-out 0s 1 team_card_effect;
-}
-
-@keyframes team_card_effect {
-  /* 0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  } */
-
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  animation: 1.7s ease-in-out 0s 1 opacity_effect;
 }
 
 #team-member .card .avatar {
@@ -443,6 +435,78 @@ a, i {
   font-size: 13px;
 }
 /* END OF TEAM SECTION */
+
+/* ABOUT SECTION: */
+.about-section {
+  margin-left: 50px;
+  margin-top: 150px;
+}
+
+.about-section p {
+  font-size: 20px;
+  margin-top: 300px;
+  margin-left: 570px;
+  text-align: justify;
+  width: 700px;
+  height: 120px;
+}
+
+.about-section .hero-text {
+  margin-top: -80px;
+  position: fixed;
+  margin-left: 950px;
+  width: 100%;
+}
+
+.about-section .hero-text h2 {
+	color: #fff;
+	font-size: 8em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.about-section .hero-text h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #03a9f4;
+}
+
+.about-section .hero-text h2:nth-child(2) {
+  margin-left: 210px;
+	color: #03a9f4;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+/* END OF ABOUT SECTION */
 
 footer {
   box-shadow: 0px 5px 60px #2482fd;

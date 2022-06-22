@@ -15,6 +15,7 @@
     <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
     <link href="css/responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/effect.css">
     
     <title>Ardix© - Home</title>
 </head>
@@ -52,30 +53,42 @@
         <a href="about.html"><button>Discover Ardix© <i class="gg-arrow-right"></i></button></a>
 
         <img class="hero-img" src="https://cdni.iconscout.com/illustration/premium/thumb/global-community-5312638-4431488.png"/>
-        <a href="#code-review"><img class="mouse-scroll-img" src="http://angeloupali.it/wp-content/uploads/2020/06/mouse_2a.gif"/></a>
+        <a href="#"><img class="mouse-scroll-img" src="http://angeloupali.it/wp-content/uploads/2020/06/mouse_2a.gif"/></a>
     </div>
     
-    <div id="beaks-points">
-        <div class="card">
-            <img src="https://cdn-icons.flaticon.com/png/512/1163/premium/1163784.png?token=exp=1655905486~hmac=d9f7d180d292cf57aac572cb74ce1b3b"/>
-            <h3 class="card-title">Cloud Computing</h3>
-            <p class="card-content">Ardix uses cloud technology from A to Z. This new method simplifies a lot of things and allows you to perform much more efficiently !</p>
-            <a href="https://www.ovhcloud.com/fr/public-cloud/cloud-computing/#:~:text=D%C3%A9finition%20du%20Cloud%20Computing,des%20serveurs%20d%C3%A9di%C3%A9s%20sur%20place." target="_blank"><button class="card-btn">READ MORE</button></a>
+    <div id="breaks-points">
+        <div data-position="left" data-offset="60" class="notViewed animBlock">
+            <div class="block">
+                <div class="card">
+                    <img src="https://cdn-icons.flaticon.com/png/512/1163/premium/1163784.png?token=exp=1655905486~hmac=d9f7d180d292cf57aac572cb74ce1b3b"/>
+                    <h3 class="card-title">Cloud Computing</h3>
+                    <p class="card-content">Ardix uses cloud technology from A to Z. This new method simplifies a lot of things and allows you to perform much more efficiently !</p>
+                    <a href="https://www.ovhcloud.com/fr/public-cloud/cloud-computing/#:~:text=D%C3%A9finition%20du%20Cloud%20Computing,des%20serveurs%20d%C3%A9di%C3%A9s%20sur%20place." target="_blank"><button class="card-btn">READ MORE</button></a>
+                </div>
+            </div>
+        </div>
+          
+        <div data-position="top" data-offset="60" class="notViewed animBlock">
+            <div class="block">
+                <div class="card">
+                    <img src="https://www.rlogical.com/wp-content/uploads/2021/08/Rlogical-Blog-Images-thumbnail.png"/>
+                    <h3 class="card-title">Environnemt</h3>
+                    <p class="card-content">The entire Ardix project app has been developed in a dynamic environment that makes it easier to create modules and other components! For this project, we chose NextJS !</p>
+                    <a href="https://nextjs.org/" target="_blank"><button class="card-btn">READ MORE</button></a>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="https://www.rlogical.com/wp-content/uploads/2021/08/Rlogical-Blog-Images-thumbnail.png"/>
-            <h3 class="card-title">Environnemt</h3>
-            <p class="card-content">The entire Ardix project app has been developed in a dynamic environment that makes it easier to create modules and other components! For this project, we chose NextJS !</p>
-            <a href="https://nextjs.org/" target="_blank"><button class="card-btn">READ MORE</button></a>
-        </div>
-
-        <div class="card">
-            <img src="https://www.nicepng.com/png/full/963-9636121_team-icon-blue-characteristics-icon-png.png"/>
-            <h3 class="card-title">Team</h3>
-            <p class="card-content">Ardix is made up of a team of 4 people (see the "Our Team" page to manage the entire project with quality and rigour...</p>
-            <a href="team.html"><button class="card-btn">READ MORE</button></a>
-        </div>
+        <div data-position="right" data-offset="0" class="notViewed animBlock">
+            <div class="block">
+                <div class="card">
+                    <img src="https://www.nicepng.com/png/full/963-9636121_team-icon-blue-characteristics-icon-png.png"/>
+                    <h3 class="card-title">Team</h3>
+                    <p class="card-content">Ardix is made up of a team of 4 people (see the "Our Team" page to manage the entire project with quality and rigour...</p>
+                    <a href="team.html"><button class="card-btn">READ MORE</button></a>
+                </div>
+            </div>
+        </div>        
     </div>
 
     <div id="promo-video">
@@ -97,7 +110,94 @@
     <a href="about.html">About</a>
 </footer>
 
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
+<script src='https://github.com/sstephenson/prototype/blob/master/src/prototype.js'></script>
+
 <script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+    $(function() {
+  var $blocks = $('.animBlock.notViewed');
+  var $window = $(window);
+
+  $window.on('scroll', function(e){
+    $blocks.each(function(i,elem){
+      if($(this).hasClass('viewed')) 
+        return;
+        
+      isScrolledIntoView($(this));
+    });
+  });
+});
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemOffset = 0;
+  
+  if(elem.data('offset') != undefined) {
+    elemOffset = elem.data('offset');
+  }
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+  
+  if(elemOffset != 0) { // custom offset is updated based on scrolling direction
+    if(docViewTop - elemTop >= 0) {
+      // scrolling up from bottom
+      elemTop = $(elem).offset().top + elemOffset;
+    } else {
+      // scrolling down from top
+      elemBottom = elemTop + $(elem).height() - elemOffset
+    }
+  }
+  
+  if((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+    // once an element is visible exchange the classes
+    $(elem).removeClass('notViewed').addClass('viewed');
+    
+    var animElemsLeft = $('.animBlock.notViewed').length;
+    if(animElemsLeft == 0){
+      // with no animated elements left debind the scroll event
+      $(window).off('scroll');
+    }
+  }
+}
+
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+
     const navbarMenu = document.getElementById("menu");
     const burgerMenu = document.getElementById("burger");
     const bgOverlay = document.querySelector(".overlay");
@@ -121,7 +221,6 @@
         });
     });
 </script>
-<script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
 
 </html>
 <!-- END -->
