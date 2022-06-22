@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Ardix© - Tout droits réservés. -->
+<!-- DEV By SkyX [ID FR] **_** -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/452/jira.png"/>
+
+    <!-- Integrated any sub-files : -->
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <title>Ardix© - About</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="brand"><img width="45px" src="https://img.icons8.com/color/452/jira.png"/></a>
+                
+                <div class="burger" id="burger">
+                    <i class="gg-menu"></i>
+                </div>
+    
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <ul class="menu-inner">
+                        <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+                        <li class="menu-item"><a class="menu-link active" href="team.html">Our Team</a></li>
+                        <!-- <li class="menu-item"><a class="menu-link" href="#">API</a></li> -->
+                        <li class="menu-item"><a class="menu-link" href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <a href="#"><button class="menu-block">Accéder à l'app</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="about">
+        <img src="https://cdni.iconscout.com/illustration/free/thumb/character-2671546-2218185.png" />
+        <!-- ABOUT DESCRIPTION TEXT : -->
+        <p>
+            Hi
+        </p>
+    </div>
+</body>
+
+<footer style="position: absolute;">
+    <img width="55px" src="https://img.icons8.com/color/452/jira.png"/>
+    <p>Ardix© Copyright - Tout droits réservés.</p>
+    <a href="index.html">Home</a>
+    <a href="team.html">Our Team</a>
+    <!-- <a href="#">API</a> -->
+    <a href="about.html">About</a>
+</footer>
+
+<script type="text/javascript">
+    const navbarMenu = document.getElementById("menu");
+    const burgerMenu = document.getElementById("burger");
+    const bgOverlay = document.querySelector(".overlay");
+
+    if (burgerMenu && navbarMenu && bgOverlay) {
+        burgerMenu.addEventListener("click", () => {
+            navbarMenu.classList.toggle("is-active");
+            bgOverlay.classList.toggle("is-active");
+        });
+
+        bgOverlay.addEventListener("click", () => {
+            navbarMenu.classList.toggle("is-active");
+            bgOverlay.classList.toggle("is-active");
+        });
+    }
+
+    document.querySelectorAll(".menu-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            navbarMenu.classList.remove("is-active");
+            bgOverlay.classList.remove("is-active");
+        });
+    });
+</script>
+
+</html>
+<!-- END -->
