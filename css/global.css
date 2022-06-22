@@ -330,6 +330,42 @@ a, i {
 }
 /* END OF BREAK-POINTS SECTION */
 
+/* PROMO VIDEO SECTION : */
+#promo-video {  
+  height: 400px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+#promo-video h1 {
+  font-size: 55px;
+}
+
+#promo-video p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#promo-video .vjs-poster {
+  width: 500px;
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+#promo-video #my-video {
+  margin: auto;
+  display: block;
+  border-radius: 10px;
+  position: relative;
+}
+/* END OF PROMO VIDEO SECTION */
+
 /* TEAM SECTION : */
 #team-member {
   height: 300px;

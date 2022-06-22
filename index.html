@@ -7,12 +7,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="icon" type="image/png" href="https://img.icons8.com/color/452/jira.png"/>
 
     <!-- Integrated any sub-files : -->
     <link href="css/global.css" rel="stylesheet">
     <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
     <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/player.css">
     
     <title>Ardix© - Home</title>
 </head>
@@ -75,9 +77,18 @@
             <a href="team.html"><button class="card-btn">READ MORE</button></a>
         </div>
     </div>
+
+    <div id="promo-video">
+        <h1>Our Promo Video</h1>
+        <p>To illustrate our project, or more precisely our application, the entire Ardix team contributed to creating a presentation video and here it is !</p>
+
+        <video id="my-video" class="video-js" controls preload="auto" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" data-setup='' loop>
+            <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type='video/mp4'>
+        </video>
+    </div>
 </body>
 
-<footer>
+<footer style="margin-top: 300px">
     <img width="55px" src="https://img.icons8.com/color/452/jira.png"/>
     <p>Ardix© Copyright - Tout droits réservés.</p>
     <a href="index.html">Home</a>
@@ -110,6 +121,7 @@
         });
     });
 </script>
+<script src='https://vjs.zencdn.net/5.4.6/video.js'></script>
 
 </html>
 <!-- END -->
