@@ -78,33 +78,18 @@
 }
 
 @media only screen and (max-width: 1395px) {
-  #code-review {
-    margin: 0;
-    float: left;
-    margin-top: 200px;
-  }
-
-  #code-review .components {
-    margin-left: -78%;
-    padding-right: 200px;
-    margin-top: 50px;
-  }
-
   html {
     height: 2000px;
+  }
+
+  #beaks-points {
+    margin-left: 8%;
+    float: left;
   }
 
   footer {
     bottom: -5px;
     position: fixed;
     background-color: black;
-  }
-
-  #code-review .techno-list {
-    float: left;
-    position: relative;
-    bottom: 20px;
-    margin-left: 10%;
-    margin-top: -400px;
   }
 }
